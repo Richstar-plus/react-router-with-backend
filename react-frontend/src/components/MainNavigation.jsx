@@ -22,19 +22,8 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              end
             >
               Events
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/events/new"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              New Event
             </NavLink>
           </li>
         </ul>
