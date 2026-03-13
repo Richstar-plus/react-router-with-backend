@@ -7,3 +7,14 @@ export function EventsPage() {
 
   return <>{<EventsList events={fetchedEvents} />}</>;
 }
+
+export async function Loader() {
+  const response = await fetch("http://localhost:8080/events");
+
+  if (!response.ok) {
+    // Handle error
+  } else {
+    const resData = await response.json();
+    return resData.events;
+  }
+}
