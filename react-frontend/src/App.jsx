@@ -30,6 +30,8 @@ import { EditEventPage } from "./pages/EditEvent";
 import { RootLayout } from "./pages/Root";
 import { EventsRootLayout } from "./pages/EventsRoot";
 import { ErrorPage } from "./pages/Error";
+import { TestPage } from "./pages/Test";
+import { TestLoader as TestApi } from "./pages/Test";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +65,11 @@ const router = createBrowserRouter([
             element: <EditEventPage />,
           },
         ],
+      },
+      {
+        path: "test",
+        element: <TestPage />,
+        loader: TestApi,
       },
     ],
   },
