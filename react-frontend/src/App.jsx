@@ -32,6 +32,7 @@ import { EventsRootLayout } from "./pages/EventsRoot";
 import { ErrorPage } from "./pages/Error";
 import { TestPage } from "./pages/Test";
 import { TestLoader as TestApi } from "./pages/Test";
+import { Loader as EventDetailsLoader } from "./pages/EventDetail";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
           {
             path: ":id",
             element: <EventDetailPage />,
+            loader: EventDetailsLoader,
           },
           {
             path: "new",
